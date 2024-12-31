@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { Component, inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { ThemeService } from './services/theme.service';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [MatButtonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'material-19-plastikaweb';
+  protected themeService = inject(ThemeService);
 }
